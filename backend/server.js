@@ -11,7 +11,11 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.set('trust proxy', true);
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'https://task-assigning-react-js-mern-app.onrender.com', // Replace with your frontend URL
+  credentials: true, // If using cookies or sessions
+}));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
