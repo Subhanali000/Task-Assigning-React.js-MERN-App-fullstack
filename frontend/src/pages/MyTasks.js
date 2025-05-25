@@ -11,7 +11,7 @@ const MyTasks = () => {
       const token = JSON.parse(localStorage.getItem('userInfo'))?.token;
 
       try {
-        const res = await axios.get('http://localhost:5000/api/lists/my-tasks', {
+        const res = await axios.get('https://task-assigning-react-js-mern-app-1i2j.onrender.com/api/lists/my-tasks', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(res.data.tasks || res.data); // Adjust based on backend structure

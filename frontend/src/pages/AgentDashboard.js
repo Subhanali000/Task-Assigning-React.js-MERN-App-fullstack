@@ -13,7 +13,7 @@ const AgentDashboard = () => {
       const token = userInfo?.token;
 
       try {
-        const res = await axios.get('http://localhost:5000/api/lists/agent-details', {
+        const res = await axios.get('https://task-assigning-react-js-mern-app-1i2j.onrender.com/api/lists/agent-details', {
           headers: { Authorization: `Bearer ${token}` },
         });
 

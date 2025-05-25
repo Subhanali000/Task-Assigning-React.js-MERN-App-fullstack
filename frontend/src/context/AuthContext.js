@@ -11,9 +11,10 @@ export const AuthProvider = ({ children }) => {
     const storedUser = localStorage.getItem('userInfo');
     if (storedUser) setUser(JSON.parse(storedUser));
   }, []);
-
+const API_URL = process.env.REACT_APP_API_URL;
   const login = async (email, password) => {
-    const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+    const res = await axios.post(`${API_URL}/api/auth/login`, { email, password }, { withCredentials: true });
+
     const token = res.data.token;
 
     const decoded = JSON.parse(atob(token.split('.')[1])); // Decode JWT

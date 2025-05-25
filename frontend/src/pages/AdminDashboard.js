@@ -17,7 +17,7 @@ const ViewAgents = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/agents/all', {
+        const response = await axios.get('https://task-assigning-react-js-mern-app-1i2j.onrender.com/api/agents/all', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
