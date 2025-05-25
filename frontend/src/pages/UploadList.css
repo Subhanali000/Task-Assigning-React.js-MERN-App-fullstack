@@ -1,0 +1,89 @@
+.upload-container {
+  padding: 20px;
+  max-width: 640px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.upload-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.upload-form label {
+  font-weight: 600;
+  color: #444;
+}
+
+.upload-form input[type="file"],
+.upload-form textarea {
+  padding: 10px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upload-form input[type="file"]:focus,
+.upload-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.upload-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.upload-form button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .upload-container {
+    padding: 10px;
+  }
+
+  .upload-form {
+    padding: 15px;
+  }
+
+  .upload-container h2 {
+    font-size: 20px;
+  }
+
+  .upload-form button {
+    font-size: 15px;
+  }
+}
