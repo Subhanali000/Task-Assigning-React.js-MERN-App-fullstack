@@ -10,7 +10,7 @@ const auth = require('../middleware/auth');
 
 // Multer setup
 const storage = multer.diskStorage({
-  destination: './uploads/',
+  destination: './upload/',
   filename: (req, file, cb) => {
     cb(null, 'upload-' + Date.now() + path.extname(file.originalname));
   },
@@ -18,11 +18,16 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage,
   fileFilter: (req, file, cb) => {
-    const allowed = /csv/;
-    const valid = allowed.test(path.extname(file.originalname).toLowerCase());
-    valid ? cb(null, true) : cb('Only CSV files are allowed');
+    const allowed = /\.(csv|xlsx)$/;  // Allow both .csv and .xlsx
+    const ext = path.extname(file.originalname).toLowerCase();
+    if (allowed.test(ext)) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only CSV and XLSX files are allowed'));
+    }
   },
 });
+
 
 // GET: All distributions (admin)
 router.get('/all', auth, async (req, res) => {
