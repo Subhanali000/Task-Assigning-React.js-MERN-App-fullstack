@@ -25,10 +25,10 @@ async function seedAdmin() {
     });
 
     await newUser.save();
-    console.log('✅ Admin user created successfully');
+    console.log(' Admin user created successfully');
     process.exit();
   } catch (err) {
-    console.error('❌ Error creating admin:', err);
+    console.error(' Error creating admin:', err);
     process.exit(1);
   }
 }
