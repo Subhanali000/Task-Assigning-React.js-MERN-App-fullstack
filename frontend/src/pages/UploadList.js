@@ -16,7 +16,7 @@ const UploadList = () => {
     formData.append('note', note); // Add note to the request
 
     try {
-      await axios.post('http://localhost:5000/api/lists/upload', formData, {
+      await axios.post('http://localhost:5000/api/lists/uploads', formData, {
         headers: {
           Authorization: localStorage.getItem('token'),
           'Content-Type': 'multipart/form-data',
