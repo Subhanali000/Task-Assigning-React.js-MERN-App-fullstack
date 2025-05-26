@@ -14,7 +14,7 @@ function ViewDistributions() {
       const token = userInfo?.token;
 
       try {
-        const response = await axios.get('https://task-assigning-react-js-mern-app-1i2j.onrender.com/api/lists/distributions', {
+        const response = await axios.get('https://backend-task-management-app-8lb2.onrender.com/api/lists/distributions', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
