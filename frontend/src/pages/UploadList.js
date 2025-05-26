@@ -16,7 +16,8 @@ const UploadList = () => {
     formData.append('note', note); // Add note to the request
 
     try {
-      await axios.post('https://task-assigning-react-js-mern-app-1i2j.onrender.com/api/lists/uploads', formData, {
+      
+      await axios.post(`https://backend-task-management-app-8lb2.onrender.com/api/lists/uploads`, formData, {
         headers: {
           Authorization: localStorage.getItem('token'),
           'Content-Type': 'multipart/form-data',
