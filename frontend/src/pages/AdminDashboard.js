@@ -18,7 +18,7 @@ const ViewAgents = () => {
 
       try {
        
-        const response = await axios.get(`https://backend-task-management-app-8lb2.onrender.com/api/agents/all`, {
+        const response = await axios.get(`https://backend-task-management-app-35j9.onrender.com/api/agents/all`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

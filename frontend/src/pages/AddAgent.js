@@ -19,7 +19,7 @@ const AddAgent = () => {
     }
 
     try {
-      await axios.post(`https://backend-task-management-app-8lb2.onrender.com/api/agents/add`, form, {
+      await axios.post(`https://backend-task-management-app-35j9.onrender.com/api/agents/add`, form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Agent added!');

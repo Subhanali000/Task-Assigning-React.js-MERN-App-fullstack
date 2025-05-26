@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password) => {
-    const res = await axios.post(`https://backend-task-management-app-8lb2.onrender.com/api/auth/login`, { email, password }, { withCredentials: true });
+    const res = await axios.post(`https://backend-task-management-app-35j9.onrender.com/api/auth/login`, { email, password }, { withCredentials: true });
 
     const token = res.data.token;
 

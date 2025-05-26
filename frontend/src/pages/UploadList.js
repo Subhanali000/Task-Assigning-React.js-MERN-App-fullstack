@@ -17,7 +17,7 @@ const UploadList = () => {
 
     try {
       
-      await axios.post(`https://backend-task-management-app-8lb2.onrender.com/api/lists/uploads`, formData, {
+      await axios.post(`https://backend-task-management-app-35j9.onrender.com/api/lists/upload`, formData, {
         headers: {
           Authorization: localStorage.getItem('token'),
           'Content-Type': 'multipart/form-data',

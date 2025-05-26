@@ -12,7 +12,7 @@ const MyTasks = () => {
 
       try {
   
-        const res = await axios.get(`https://backend-task-management-app-8lb2.onrender.com/api/lists/my-tasks`, {
+        const res = await axios.get(`https://backend-task-management-app-35j9.onrender.com/api/lists/my-tasks`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(res.data.tasks || res.data); // Adjust based on backend structure

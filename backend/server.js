@@ -9,12 +9,21 @@ const listRoutes = require('./routes/lists');
 dotenv.config();
 
 const app = express();
-
 // Middleware
-app.set('trust proxy', true);
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://task-assigning-react-js-mern-app.onrender.com'
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://task-assigning-react-js-mern-app.onrender.com', // Replace with your frontend URL
-  credentials: true, // If using cookies or sessions
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
 }));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
