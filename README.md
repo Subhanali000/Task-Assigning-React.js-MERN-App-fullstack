@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
-#  Demonstration video Link => 
-=======
 #  Demonstration video Link => https://drive.google.com/file/d/1em2iKnv_UHhrxeQJx1nCIBOSGcENuvVm/view?usp=drive_link
->>>>>>> a2eb84ea1b54769ae9333d6b96b4bb1166be12bd
+
 #  Agent Task Manager
 
 A simple MERN-based application that allows admins to upload contact lists via CSV, assign tasks to agents with notes, and let agents view their own tasks and details.

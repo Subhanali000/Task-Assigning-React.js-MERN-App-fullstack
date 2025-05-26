@@ -15,6 +15,7 @@ function ViewDistributions() {
 
       try {
         const response = await axios.get('https://backend-task-management-app-35j9.onrender.com/api/lists/distributions', {
+
           headers: {
             Authorization: `Bearer ${token}`,
           },
